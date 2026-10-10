@@ -1,0 +1,2 @@
+export const FACEBOOK_URL: string = "https://www.facebook.com/people/Lumibri-ABA/61593245937195/?mibextid=wwXIfr&rdid=IfixlHPliNOIoicF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F194FBzZ68P%2F%3Fmibextid%3DwwXIfr%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio";
+export const INSTAGRAM_URL: string = "https://www.instagram.com/lumibriaba?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw==";
