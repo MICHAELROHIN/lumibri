@@ -90,10 +90,10 @@ export default function Home() {
             />
           </div>
 
-          {/* Light wash only behind the text column; the rest of the wall stays visible */}
+          {/* Soft edge fade so the photo wall blends into the page */}
           <div
             aria-hidden="true"
-            className="home-hero-wash pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(255,250,245,0.88)_0%,rgba(255,250,245,0.7)_28%,rgba(255,250,245,0.15)_52%,rgba(255,250,245,0)_70%)]"
+            className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_center,rgba(255,250,245,0.35)_0%,rgba(255,250,245,0)_65%)]"
           />
           {/* Fade the bottom edge into the next section */}
           <div
@@ -101,30 +101,43 @@ export default function Home() {
             className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-20 bg-gradient-to-b from-transparent to-white"
           />
 
-          <div className="relative z-10 mx-auto grid min-h-[auto] max-w-7xl items-center gap-10 px-5 pb-16 pt-28 sm:px-6 sm:pt-36 lg:min-h-screen lg:grid-cols-[1.1fr_1fr] lg:gap-6 lg:pb-20">
-            <div>
-              <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-navy sm:text-6xl">
-                Guiding every child toward a place of possibilities
-              </h1>
-              <p className="mt-6 max-w-lg text-lg leading-8 text-navy/75">
-                At Lumibri ABA Services, we are dedicated to helping children with autism and developmental challenges reach meaningful milestones through evidence-based therapy and compassionate care.
-              </p>
-              <div className="mt-9 flex flex-wrap gap-4">
-                <a href="/contact" className="rounded-2xl bg-navy px-8 py-4 font-semibold text-white shadow-lg shadow-navy/20 transition hover:bg-[#1a2f72]">Start Intake</a>
-                {/* <a href="#services" className="rounded-2xl border border-navy/15 bg-white/80 px-8 py-4 font-semibold text-navy transition hover:bg-white">Explore Services</a> */}
-              </div>
-              <p className="mt-6 text-sm font-medium text-navy/70">In-home ABA across Northern New Jersey</p>
-            </div>
-            <div className="relative mx-auto w-full max-w-md px-3 sm:px-0">
-              <div className="absolute -inset-4 rotate-[-5deg] rounded-[3.5rem] bg-gradient-to-br from-teal via-violet to-magenta opacity-85 shadow-2xl shadow-violet/20" />
-              <div className="relative rounded-[3.25rem] bg-white p-3 shadow-2xl shadow-navy/25">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/Lumibri ABA/1.png"
-                  alt="Children smiling together"
-                  className="aspect-[4/5] w-full rounded-[2.75rem_2.75rem_5rem_2.75rem] object-cover"
-                />
-                <span aria-hidden="true" className="absolute bottom-5 right-5 h-12 w-12 rounded-full border-4 border-white bg-orange shadow-lg" />
+          <div className="relative z-10 mx-auto flex min-h-[auto] max-w-7xl items-center justify-center px-5 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-36 lg:min-h-screen">
+            {/* Glass card */}
+            <div className="relative w-full max-w-3xl overflow-hidden rounded-[2.5rem] border border-white/70 bg-white/55 px-6 py-12 text-center shadow-[0_30px_80px_-20px_rgba(20,35,90,0.35),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl backdrop-saturate-150 sm:rounded-[3rem] sm:px-14 sm:py-16">
+              {/* Coloured glow blobs inside the glass */}
+              <span aria-hidden="true" className="pointer-events-none absolute -left-16 top-24 h-56 w-56 rounded-full bg-teal/25 blur-3xl" />
+              <span aria-hidden="true" className="pointer-events-none absolute -right-16 bottom-10 h-64 w-64 rounded-full bg-magenta/20 blur-3xl" />
+              <span aria-hidden="true" className="pointer-events-none absolute left-1/3 top-1/2 h-48 w-48 rounded-full bg-orange/20 blur-3xl" />
+
+              <div className="relative">
+                {/* <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-4 py-1.5 text-sm font-medium text-navy shadow-sm backdrop-blur">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#5bc46a]" />
+                  In-home ABA across Northern New Jersey
+                </span> */}
+
+                <h1 className="mx-auto mt-7 max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-6xl">
+                  Guiding every child towards a place of{" "}
+                  <GradientText animationSpeed={4}>possibilities</GradientText>
+                </h1>
+
+                <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-navy/75">
+                  At Lumibri ABA Services, we are dedicated to helping children with autism and developmental challenges reach meaningful milestones through evidence-based therapy and compassionate care.
+                </p>
+
+                <div className="mt-9 flex flex-wrap justify-center gap-4">
+                  <a
+                    href="/contact"
+                    className="rounded-full bg-navy px-8 py-4 font-semibold text-white shadow-lg shadow-navy/25 transition hover:bg-[#1a2f72]"
+                  >
+                    Start Intake
+                  </a>
+                  <a
+                    href="#services"
+                    className="rounded-full border border-white/80 bg-white/80 px-8 py-4 font-semibold text-navy shadow-sm backdrop-blur transition hover:bg-white"
+                  >
+                    Explore Services
+                  </a>
+                </div>
               </div>
             </div>
           </div>
