@@ -36,13 +36,13 @@ const services = [
   {
     id: "aba",
     title: "Applied Behavior Analysis (ABA)",
-    img: "https://cdn.sanity.io/images/xhxj9s9r/production/dcaac32ff3ec6a4d2a75379938df13b6fb0ce3d5-600x400.png?auto=format&q=80",
+    img: "/Lumibri ABA/6.png",
     text: "ABA is an evidence-based approach to understanding learning and behavior and how behavior is influenced by the environment. ABA services use individualized strategies to support meaningful skill development, independence, and participation in everyday life. Services may address communication, social interaction, learning, play, daily living skills, adaptive behavior, and other areas based on each individual’s strengths, needs, and priorities.",
   },
   {
     id: "social-skill-group",
     title: "Social Skill Group",
-    img: "https://cdn.sanity.io/images/xhxj9s9r/production/a7f661a4afca88ab5c3aaee7e91c3f578b739343-600x400.png?auto=format&q=80",
+    img: "/Lumibri ABA/18.png",
     text: "Social Skills Groups provide structured opportunities for children to develop and practice social, communication, and adaptive skills through guided activities and peer interactions. Groups may address skills such as initiating and maintaining interactions, turn-taking, sharing, following group expectations, responding to others, perspective-taking, problem-solving, and emotional regulation. Intervention is individualized to each child’s needs and may include modeling, prompting, reinforcement, and opportunities to practice and generalize skills across people, activities, and settings.",
   },
 ];
@@ -116,15 +116,16 @@ export default function Home() {
               <p className="mt-6 text-sm font-medium text-navy/70">In-home ABA across Northern New Jersey</p>
             </div>
             <div className="relative mx-auto w-full max-w-md px-3 sm:px-0">
-              {/* offset colour blocks behind the photo */}
-              <span aria-hidden="true" className="absolute -left-6 -top-6 h-full w-full rotate-[-6deg] rounded-[2.5rem] bg-gradient-to-br from-teal to-violet opacity-90" />
-              <span aria-hidden="true" className="absolute -bottom-5 -right-5 h-full w-full rotate-[4deg] rounded-[2.5rem] bg-gradient-to-tr from-orange to-magenta opacity-80" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://cdn.sanity.io/images/xhxj9s9r/production/b2c6913b9e28e6b19d9a3057af6753cb6a9bbd7c-600x400.png?auto=format&q=80"
-                alt="Child smiling in therapy"
-                className="relative aspect-[4/5] w-full rounded-[2.5rem] border-[10px] border-white object-cover shadow-2xl shadow-navy/25"
-              />
+              <div className="absolute -inset-4 rotate-[-5deg] rounded-[3.5rem] bg-gradient-to-br from-teal via-violet to-magenta opacity-85 shadow-2xl shadow-violet/20" />
+              <div className="relative rounded-[3.25rem] bg-white p-3 shadow-2xl shadow-navy/25">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Lumibri ABA/1.png"
+                  alt="Children smiling together"
+                  className="aspect-[4/5] w-full rounded-[2.75rem_2.75rem_5rem_2.75rem] object-cover"
+                />
+                <span aria-hidden="true" className="absolute bottom-5 right-5 h-12 w-12 rounded-full border-4 border-white bg-orange shadow-lg" />
+              </div>
             </div>
           </div>
         </section>

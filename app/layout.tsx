@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Lumibri ABA Services | In-Home ABA Therapy in Northern New Jersey",
   description:
     "Evidence-based Applied Behavior Analysis (ABA) therapy and Social Skill Groups for children with autism across Northern New Jersey.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

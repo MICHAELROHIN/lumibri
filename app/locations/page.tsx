@@ -21,8 +21,7 @@ const tints = [
   "bg-navy/10 text-navy",
 ];
 
-const heroImg =
-  "https://cdn.sanity.io/images/xhxj9s9r/production/561c2dad6dcc2f5b2494c1a3187d1b09f1774c16-600x400.png?auto=format&q=80";
+const heroImg = "/Lumibri ABA/15.png";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (

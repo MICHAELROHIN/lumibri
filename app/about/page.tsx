@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div className="mx-auto w-full max-w-lg">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://cdn.sanity.io/images/xhxj9s9r/production/5982286b756786dfb4ec4c5bc7a1b8fba1b71ba5-600x400.png?auto=format&q=80"
+                src="/Lumibri ABA/11.png"
                 alt="Child and therapist working together"
                 className="aspect-[3/2] w-full rounded-3xl object-cover shadow-xl shadow-navy/10"
               />

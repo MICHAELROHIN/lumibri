@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     "Join the Lumibri ABA Services team and build a rewarding career in behavioral healthcare.",
 };
 
-const heroImage =
-  "https://cdn.sanity.io/images/xhxj9s9r/production/b2c6913b9e28e6b19d9a3057af6753cb6a9bbd7c-600x400.png?auto=format&q=80";
+const heroImage = "/Lumibri ABA/16.png";
 
 const benefits = [
   "Competitive Compensation",

@@ -2,11 +2,33 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { nav } from "./nav";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    function handlePointerDown(event: PointerEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setMenuOpen(false);
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="absolute inset-x-0 top-0 z-30 bg-white">
@@ -23,7 +45,7 @@ export default function Navbar() {
           <Link href="/contact" className="rounded-2xl bg-navy px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1a2f72] sm:px-6 sm:py-3 sm:text-base">
             Start Intake
           </Link>
-          <div className="relative lg:hidden">
+          <div ref={menuRef} className="relative lg:hidden">
             <button
               type="button"
               aria-expanded={menuOpen}

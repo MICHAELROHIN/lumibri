@@ -11,8 +11,7 @@ export const metadata: Metadata = {
     "Contact Lumibri ABA Services to learn more about ABA therapy and schedule an intake consultation.",
 };
 
-const heroImage =
-  "https://cdn.sanity.io/images/xhxj9s9r/production/5982286b756786dfb4ec4c5bc7a1b8fba1b71ba5-600x400.png?auto=format&q=80";
+const heroImage = "/Lumibri ABA/8.png";
 
 const steps = [
   ["Contact Us", "Reach out by phone or email. Our intake team will answer your questions and guide you."],

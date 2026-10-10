@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "In-home ABA therapy and Social Skill Groups for children across Northern New Jersey.",
 };
 
-const IMG = "https://cdn.sanity.io/images/xhxj9s9r/production";
+const IMG = "/Lumibri ABA";
 
 const abaSupports = [
   "Communication Skills",
@@ -99,7 +99,7 @@ export default function ServicesPage() {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${IMG}/b2c6913b9e28e6b19d9a3057af6753cb6a9bbd7c-600x400.png?auto=format&q=80`}
+              src={`${IMG}/13.png`}
               alt="Child smiling during an in-home therapy session"
               className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-2xl shadow-navy/10 ring-8 ring-white"
             />
@@ -111,7 +111,7 @@ export default function ServicesPage() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:gap-20 lg:py-32">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${IMG}/350607a2607098cda53b33f470e7bdf13670c894-600x400.png?auto=format&q=80`}
+              src={`${IMG}/9.png`}
               alt="Child in an ABA therapy session"
               className="order-1 aspect-[4/3] w-full rounded-[2rem] object-cover lg:order-none"
             />
@@ -141,7 +141,7 @@ export default function ServicesPage() {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${IMG}/1519bb580d948b4c729049e00315a4f4ea428e1c-600x400.png?auto=format&q=80`}
+              src={`${IMG}/18.png`}
               alt="Children practicing social skills together in a group"
               className="aspect-[4/3] w-full rounded-[2rem] object-cover lg:order-2"
             />
