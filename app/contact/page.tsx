@@ -26,7 +26,7 @@ export default function ContactPage() {
 
       <main>
         <section className="overflow-hidden bg-white">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-36 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:pb-28 lg:pt-48">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-24 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-4 lg:mt-28">
             <div className="max-w-xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d46d42]">
                 Get in touch
@@ -37,6 +37,9 @@ export default function ContactPage() {
               <p className="mt-7 max-w-lg text-lg leading-8 text-muted sm:text-xl">
                 Whether you&apos;re ready to start therapy or just have a few
                 questions, our team is standing by to help.
+              </p>
+               <p className="mt-4 max-w-lg text-lg leading-8 text-muted sm:text-xl">
+                There’s no pressure and no wrong question. Call, email, or send us a message, and we’ll help you understand what comes next.
               </p>
             </div>
             <div className="relative lg:justify-self-end">
@@ -51,7 +54,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-24 sm:px-10 lg:py-32">
+        <section className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d46d42]">
               What to expect
@@ -74,7 +77,7 @@ export default function ContactPage() {
         </section>
 
         <section className="bg-white">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24 lg:py-32">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:py-24">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d46d42]">
                 Contact information
@@ -95,13 +98,13 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-navy">Phone number</h3>
-                  <a href="tel:2016812743" className="mt-2 inline-block text-muted underline decoration-[#d46d42] underline-offset-4">
+                  <a href="tel:2016812743" className="mt-2 inline-block text-muted">
                     (201) 681-2743
                   </a>
                 </div>
                 <div>
                   <h3 className="font-semibold text-navy">Email</h3>
-                  <a href={gmailCompose({ to: SITE_EMAIL })} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-muted underline decoration-[#d46d42] underline-offset-4">
+                  <a href={gmailCompose({ to: SITE_EMAIL })} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-muted ">
                     info@lumibriaba.com
                   </a>
                 </div>
@@ -120,7 +123,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="hero-bg px-6 py-28 text-center sm:px-10">
+        <section className="hero-bg px-6 py-20 text-center sm:px-10">
           <h2 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.03em] text-navy sm:text-5xl">
             Ready to schedule an official{" "}
             <GradientText animationSpeed={4}> intake consultation?</GradientText>

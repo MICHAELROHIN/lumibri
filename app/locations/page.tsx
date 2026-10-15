@@ -39,13 +39,16 @@ export default function LocationsPage() {
       <main>
         {/* Hero */}
         <section className="bg-white">
-          <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 pb-24 pt-44 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-24 lg:grid-cols-2 lg:py-4 lg:mt-20">
             <div>
               <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-navy sm:text-5xl">
                 In-Home Therapy Services Across Northern New Jersey
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-8 text-muted">
                 Lumibri ABA Services proudly provides in-home services to children and families throughout Northern New Jersey.
+              </p>
+              <p className="mt-4 max-w-lg text-lg leading-8 text-muted">
+                We bring therapy to you, so your child can learn and grow in the place where they feel safest and most comfortable.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
                 <Link
@@ -75,7 +78,7 @@ export default function LocationsPage() {
         </section>
 
         {/* In-home & community */}
-        <section className="mx-auto max-w-4xl px-6 py-28 text-center">
+        <section className="mx-auto max-w-4xl px-6 py-20 text-center">
           <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
             In-Home &amp; Community Therapy
           </h2>
@@ -85,7 +88,7 @@ export default function LocationsPage() {
         </section>
 
         {/* Counties */}
-        <section id="counties" className="bg-white py-28">
+        <section id="counties" className="bg-white py-20">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
               <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
@@ -128,7 +131,7 @@ export default function LocationsPage() {
         </section>
 
         {/* Contact */}
-        <section className="hero-bg px-6 py-28 text-center">
+        <section className="hero-bg px-6 py-20 text-center">
           <h2 className="mx-auto max-w-2xl text-4xl font-extrabold tracking-tight text-navy"> Get In Touch <GradientText animationSpeed={4}> With Us</GradientText>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">

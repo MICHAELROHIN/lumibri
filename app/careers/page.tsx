@@ -36,7 +36,7 @@ export default function CareersPage() {
 
       <main>
         <section className="overflow-hidden bg-white">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-36 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:pb-28 lg:pt-48">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-24 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:py-4 lg:mt-24">
             <div className="max-w-xl">
               <Eyebrow>Careers at Lumibri</Eyebrow>
               <h1 className="mt-6 text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-navy sm:text-6xl lg:text-7xl">
@@ -45,6 +45,11 @@ export default function CareersPage() {
               <p className="mt-7 max-w-lg text-lg leading-8 text-muted sm:text-xl">
                 Make a meaningful impact while building a rewarding career in
                 behavioral healthcare.
+              </p>
+              <p className="mt-4 max-w-lg text-lg leading-8 text-muted sm:text:xl">
+                At Lumibri, you’ll work alongside caring professionals who
+                believe in individualized, evidence-based therapy and in
+                supporting each other.
               </p>
               <a
                 href="#opportunities"
@@ -70,7 +75,7 @@ export default function CareersPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-24 sm:px-10 lg:py-32">
+        <section className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
             <div>
               <Eyebrow>Why work with us?</Eyebrow>
@@ -97,7 +102,7 @@ export default function CareersPage() {
         </section>
 
         <section id="opportunities" className="bg-white">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 sm:px-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24 lg:py-32">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16 lg:py-24">
             <div>
               <Eyebrow>Current opportunities</Eyebrow>
               <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.03em] text-navy sm:text-5xl">
@@ -113,7 +118,7 @@ export default function CareersPage() {
           </div>
         </section>
 
-        <section className="hero-bg px-6 py-28 text-center sm:px-10">
+        <section className="hero-bg px-6 py-20 text-center sm:px-10">
           <Eyebrow>Don&apos;t see your role?</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.03em] text-navy sm:text-5xl">
             We are always looking for passionate clinicians.

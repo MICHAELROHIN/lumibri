@@ -15,11 +15,10 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden bg-white">
-          <div className="relative z-10 mx-auto grid min-h-[88vh] max-w-7xl items-center gap-6 px-6 pb-20 pt-36 lg:grid-cols-[1.1fr_1fr]">
+          <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 px-6 py-26 lg:grid-cols-[1.1fr_1fr] lg:py-4 lg:mt-24">
             <div>
               <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-navy sm:text-6xl">
                 About Lumibri ABA Services
@@ -27,6 +26,10 @@ export default function AboutPage() {
               <p className="mt-6 max-w-lg text-lg leading-8 text-muted">
                 Empowering children and supporting families through evidence-based behavioral therapies across Northern New Jersey.
               </p>
+                  <p className="mt-4 max-w-lg text-lg leading-8 text-muted">
+                We believe the best outcomes come from combining clinical expertise with real partnership. Our team brings structure, warmth, and care to every in-home session.
+              </p>
+
             </div>
             <div className="mx-auto w-full max-w-lg">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -41,7 +44,7 @@ export default function AboutPage() {
 
         {/* Mission */}
         <section className="bg-[#f5f1eb]">
-          <div className="mx-auto max-w-4xl px-6 py-28 text-center">
+          <div className="mx-auto max-w-4xl px-6 py-20 text-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-navy">Our mission</h2>
           <BlurText
             text="To provide high-quality, compassionate, and individualized therapy services that support children and families across Northern New Jersey."
@@ -52,7 +55,7 @@ export default function AboutPage() {
         </section>
 
         {/* Vision */}
-        <section className="bg-navy py-28 text-white">
+        <section className="bg-navy py-20 text-white">
           <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_1.6fr]">
             <div>
               <h2 className="text-5xl font-semibold tracking-tight">Our vision</h2>
@@ -83,7 +86,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="hero-bg px-6 py-28 text-center">
+        <section className="hero-bg px-6 py-20 text-center">
           <h2 className="mx-auto max-w-2xl text-4xl font-extrabold tracking-tight text-navy">
             Ready to <GradientText animationSpeed={4}>learn more?</GradientText>
           </h2>

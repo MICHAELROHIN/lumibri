@@ -77,16 +77,19 @@ export default function ServicesPage() {
     <>
       <Navbar />
 
-      <main className="pt-28">
+      <main>
         {/* Hero */}
         <section className="hero-bg">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:gap-20 lg:py-28">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-26 lg:grid-cols-2 lg:gap-16 lg:py-4 lg:mt-22">
             <div>
               <h1 className="text-5xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-6xl">
                 Our Services
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
                 Lumibri ABA Services provides comprehensive, in-home therapy services designed to support the developmental, behavioral, communication, and daily living needs of children throughout Northern New Jersey.
+              </p>
+               <p className="mt-4 max-w-xl text-lg leading-8 text-muted">
+                Choose from individualized in-home ABA therapy and structured Social Skill Groups, each guided by qualified professionals and built around your child.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
                 <Link href="/contact" className="rounded-2xl bg-navy px-8 py-4 font-semibold text-white shadow-lg shadow-navy/20 transition hover:bg-[#1a2f72]">
@@ -108,7 +111,7 @@ export default function ServicesPage() {
 
         {/* ABA */}
         <section id="aba" className="scroll-mt-28 bg-white">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:gap-20 lg:py-32">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${IMG}/9.png`}
@@ -130,7 +133,7 @@ export default function ServicesPage() {
 
         {/* Social Skill Group */}
         <section id="social-skill-group" className="scroll-mt-28 bg-[#f5f1eb]">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:gap-20 lg:py-32">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
             <div className="lg:order-1">
               <h2 className="text-4xl font-extrabold tracking-tight text-navy">Social Skill Group</h2>
               <p className="mt-5 text-lg leading-8 text-muted">
@@ -150,7 +153,7 @@ export default function ServicesPage() {
 
         {/* Process */}
         <section id="process" className="scroll-mt-16 bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-4xl font-extrabold tracking-tight text-navy">Our ABA Services Process</h2>
               <p className="mt-5 text-lg leading-8 text-muted">
@@ -172,7 +175,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="hero-bg px-6 py-28 text-center">
+        <section className="hero-bg px-6 py-20 text-center">
           <h2 className="mx-auto max-w-2xl text-4xl font-extrabold tracking-tight text-navy">
             Ready to <GradientText animationSpeed={4}>Get Started?</GradientText>
           </h2>

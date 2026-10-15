@@ -1,7 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
 import Link from "next/link";
-import GridMotion from "./components/GridMotion";
+import ShapeGrid from "./components/ShapeGrid";
 import GradientText from "./components/GradientText";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/Footer";
@@ -9,28 +7,6 @@ import InsuranceLogos from "./components/InsuranceLogos";
 
 const footerNav = ["Home", "About Us", "Services", "Locations", "Careers"];
 const dots = ["bg-teal", "bg-magenta", "bg-orange", "bg-violet", "bg-[#5bc46a]"];
-
-// Reads every image in public/Lumibri ABA automatically (no filenames needed).
-function loadGridImages(): string[] {
-  const folder = "Lumibri ABA";
-  try {
-    return fs
-      .readdirSync(path.join(process.cwd(), "public", folder))
-      .filter((f) => /\.(jpe?g|png|webp|avif|gif)$/i.test(f))
-      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-      .map((f) => `/${encodeURIComponent(folder)}/${encodeURIComponent(f)}`);
-  } catch {
-    return [];
-  }
-}
-
-const fallbackGridItems = [
-  "https://cdn.sanity.io/images/xhxj9s9r/production/b2c6913b9e28e6b19d9a3057af6753cb6a9bbd7c-600x400.png?auto=format&q=80",
-  "https://cdn.sanity.io/images/xhxj9s9r/production/dcaac32ff3ec6a4d2a75379938df13b6fb0ce3d5-600x400.png?auto=format&q=80",
-  "https://cdn.sanity.io/images/xhxj9s9r/production/a7f661a4afca88ab5c3aaee7e91c3f578b739343-600x400.png?auto=format&q=80",
-];
-const localImages = loadGridImages();
-const gridItems = localImages.length ? localImages : fallbackGridItems;
 
 const services = [
   {
@@ -69,39 +45,34 @@ export default function Home() {
 
       <main>
         {/* Hero */}
-        <section className="hero-bg relative overflow-hidden">
-          {/* Animated photo wall (background layer) */}
-          <div className="home-grid-motion absolute inset-0 z-0">
-            <GridMotion
-              items={gridItems}
-              theme="light"
-              rows={3}
-              aspectRatio={1.5}
-              gap={20}
-              radius={24}
-              angle={-8}
-              tilt={0}
-              speed={20}
-              direction="alternate"
-              parallax={0.4}
-              spotlight={0.8}
-              dim={0.1}
-              fade={0.3}
+        <section className="bg-[#031235] relative overflow-hidden">
+          {/* Animated hexagon shape grid (background layer, reacts to cursor + click) */}
+          <div className="absolute inset-0 z-0">
+            <ShapeGrid
+              shape="hexagon"
+              direction="up"
+              lineColor="#2a2734"
+              hoverColor="#ffffff"
+              hoverFillColor="#ffffff"
+              fillOpacity={0.15}
+              cellSize={34}
+              speed={1.6}
+              tiltX={41}
+              tiltY={-25}
+              rainbow
+              lineWidth={1}
+              radius={2.2}
+              trail={1.1}
+              glow={0.5}
+              twinkle={0.25}
+              fade={1}
+              backgroundColor="#031235"
+              clickCascade
+              intro
             />
           </div>
 
-          {/* Soft edge fade so the photo wall blends into the page */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_center,rgba(255,250,245,0.35)_0%,rgba(255,250,245,0)_65%)]"
-          />
-          {/* Fade the bottom edge into the next section */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-20 bg-gradient-to-b from-transparent to-white"
-          />
-
-          <div className="relative z-10 mx-auto flex min-h-[auto] max-w-7xl items-center justify-center px-5 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-36 lg:min-h-screen">
+          <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-center px-5 py-20 sm:px-6 sm:py-26 mt-20 sm:mt-26 lg:min-h-[calc(100vh-5rem)]">
             {/* Glass card */}
             <div className="relative w-full max-w-3xl overflow-hidden rounded-[2.5rem] border border-white/70 bg-white/55 px-6 py-12 text-center shadow-[0_30px_80px_-20px_rgba(20,35,90,0.35),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl backdrop-saturate-150 sm:rounded-[3rem] sm:px-14 sm:py-16">
               {/* Coloured glow blobs inside the glass */}
@@ -148,7 +119,7 @@ export default function Home() {
 
         {/* Services */}
         <section id="services" className="bg-[#fffaf5]">
-          <div className="mx-auto max-w-7xl px-6 py-28">
+          <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="max-w-xl">
             <h2 className="text-4xl font-extrabold tracking-tight text-navy">Comprehensive services</h2>
             <p className="mt-4 text-lg text-muted">Evidence-based therapy tailored to your child’s unique needs and goals.</p>
@@ -170,7 +141,7 @@ export default function Home() {
         </section>
 
         {/* Approach */}
-        <section className="bg-navy py-28 text-white">
+        <section className="bg-navy py-20 text-white">
           <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.6fr]">
             <div>
               <h2 className="text-4xl font-extrabold tracking-tight">Our approach</h2>
@@ -192,7 +163,7 @@ export default function Home() {
 
         {/* Journey */}
         <section className="bg-[#f5f1eb]">
-          <div className="mx-auto max-w-6xl px-6 py-28">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="max-w-xl">
             <h2 className="text-4xl font-extrabold tracking-tight text-navy">Your child’s ABA journey</h2>
             <p className="mt-4 text-lg text-muted">A clear, individualized process from first conversation to ABA services.</p>
@@ -211,7 +182,7 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section id="contact" className="hero-bg px-6 py-28 text-center">
+        <section id="contact" className="hero-bg px-6 py-20 text-center">
           <h2 className="mx-auto max-w-2xl text-4xl font-extrabold tracking-tight text-navy">
             Ready to <GradientText animationSpeed={4}>Get Started?</GradientText>
           </h2>
